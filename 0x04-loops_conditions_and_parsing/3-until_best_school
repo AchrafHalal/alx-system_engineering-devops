@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#script that displays Best School 10 times
+
+i=10
+until((i < 1))
+do
+    echo "Best School"
+    ((i--))
+done
