@@ -10,3 +10,4 @@ else
 	IP=$2
     scp -i $SSH_KEY -o StrictHostKeyChecking=no $FILE_PATH $USERNAME@$IP:~/
 fi
+
