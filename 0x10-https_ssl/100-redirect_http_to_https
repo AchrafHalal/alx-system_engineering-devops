@@ -24,8 +24,8 @@ defaults
     option httplog
     option dontlognull
     timeout connect 5000
-    timeout client 50000
-    timeout server 50000
+    timeout client  50000
+    timeout server  50000
     errorfile 400 /etc/haproxy/errors/400.http
     errorfile 403 /etc/haproxy/errors/403.http
     errorfile 408 /etc/haproxy/errors/408.http
@@ -36,8 +36,9 @@ defaults
 
 listen myserver
     bind *:80
-    bind *:443 ssl crt /etc/haproxy/certs/www.mohameddani.tech.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.achrafhalal.tech.pem
     redirect scheme https if !{ ssl_fc }
     balance roundrobin
     server 433610-web-01 100.25.134.4:80 check
     server 433610-web-02 100.25.10.200:80 check
+
